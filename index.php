@@ -14,12 +14,12 @@
     <nav class="navbar">
         <div class="logo">Sido Rabi</div>
         <div class="nav-links">
-            <a href="#home" class="active">Home</a>
+            <a href="#index.php" class="active">Home</a>
             <a href="vendor.php">Vendor</a>
             <a href="#review">Review</a>
         </div>
         <div class="auth-button">
-            <a href="#login" class="login-btn">
+            <a href="login/login.php" class="login-btn">
                 <i class="fas fa-user"></i>
                 Login
             </a>
@@ -43,6 +43,16 @@
         <section id="vendor" class="vendor-section">
             <h2>Our Wedding Packages</h2>
             <div class="package-grid">
+            <div class="package-card">
+                    <h3>Khusus Koe</h3>
+                    <div class="price">Rp.0</div>
+                    <button class="select-btn">Select</button>
+                </div>
+                <div class="package-card">
+                    <h3>Murah Meriah</h3>
+                    <div class="price">Rp. 100.000</div>
+                    <button class="select-btn">Select</button>
+                </div>
                 <div class="package-card">
                     <h3>Basic Wedding</h3>
                     <div class="price">Rp. 75.000.000</div>
@@ -74,8 +84,8 @@
                 <p>"Pelayanan luar biasa! Sangat membantu dalam perencanaan pernikahan kami."</p>
             </div>
             <div class="reviewer">
-                <img src="avatar1.jpg" alt="John Doe" class="reviewer-img">
-                <p class="reviewer-name">John Doe</p>
+                <img src="image/WhatsApp Image 2024-10-22 at 21.30.21.jpeg" alt="ferdio" class="reviewer-img">
+                <p class="reviewer-name">Ferdio Dwi</p>
             </div>
         </div>
         <div class="review-card">
@@ -83,8 +93,8 @@
                 <p>"Tim yang profesional dan kreatif. Hasil pernikahan kami benar-benar seperti mimpi!"</p>
             </div>
             <div class="reviewer">
-                <img src="avatar2.jpg" alt="Jane Smith" class="reviewer-img">
-                <p class="reviewer-name">Jane Smith</p>
+                <img src="image/WhatsApp Image 2024-10-22 at 21.44.09.jpeg" alt="Mas Rio" class="reviewer-img">
+                <p class="reviewer-name">Mas Rio</p>
             </div>
         </div>
         <div class="review-card">
@@ -92,8 +102,8 @@
                 <p>"Sangat merekomendasikan! Mereka membuat hari spesial kami menjadi tak terlupakan."</p>
             </div>
             <div class="reviewer">
-                <img src="avatar3.jpg" alt="Mike Johnson" class="reviewer-img">
-                <p class="reviewer-name">Mike Johnson</p>
+                <img src="image/WhatsApp Image 2024-10-22 at 21.49.19.jpeg" alt="Redrigo" class="reviewer-img">
+                <p class="reviewer-name">Redrigo</p>
             </div>
         </div>
         <div class="review-card">
@@ -101,8 +111,26 @@
                 <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
             </div>
             <div class="reviewer">
-                <img src="avatar4.jpg" alt="Emily Brown" class="reviewer-img">
-                <p class="reviewer-name">Emily Brown</p>
+                <img src="image/WhatsApp Image 2024-10-22 at 21.58.47.jpeg" alt="rio" class="reviewer-img">
+                <p class="reviewer-name">Sam Rio Sul</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-content">
+                <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
+            </div>
+            <div class="reviewer">
+                <img src="avatar4.jpg" alt="alvyn" class="reviewer-img">
+                <p class="reviewer-name">Alvyn Dlogok</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-content">
+                <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
+            </div>
+            <div class="reviewer">
+                <img src="avatar4.jpg" alt="arindi" class="reviewer-img">
+                <p class="reviewer-name">Arindi Gempol</p>
             </div>
         </div>
     </div>
@@ -119,7 +147,7 @@
             });
         });
     </script>
-
+</body>
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-section">
@@ -143,6 +171,4 @@
         <p>&copy; 2023 Bali Glitz Wedding. All rights reserved.</p>
     </div>
 </footer>
-
-</body>
 </html>
