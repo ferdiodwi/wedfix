@@ -15,7 +15,7 @@
         <div class="logo">Sido Rabi</div>
         <div class="nav-links">
             <a href="#home" class="active">Home</a>
-            <a href="#vendor">Vendor</a>
+            <a href="vendor.php">Vendor</a>
             <a href="#review">Review</a>
         </div>
         <div class="auth-button">
