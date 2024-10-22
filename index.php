@@ -12,11 +12,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Wedding Organizer</div>
+        <div class="logo">Sido Rabi</div>
         <div class="nav-links">
             <a href="#home" class="active">Home</a>
             <a href="#vendor">Vendor</a>
-            <a href="#tamu">Tamu</a>
             <a href="#review">Review</a>
         </div>
         <div class="auth-button">
@@ -28,18 +27,18 @@
     </nav>
 
     <main>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Wedding, 💝<br>what the world needs</h1>
-                    <p>Solusi untuk setiap pernikahan yang sempurna. Temukan paket pernikahan untuk membawa impian pada pernikahan impian Anda.</p>
-                    <a href="#packages" class="browse-btn">Browse</a>
-                </div>
-                <div class="hero-image">
-                    <img src="home.jpg" alt="Elegant wedding couple on stone stairs with floral decorations">
-                </div>
-            </div>
-        </section>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Wedding, 💝<br>what the world needs</h1>
+            <p>Solusi untuk setiap pernikahan yang sempurna. Temukan paket pernikahan untuk membawa impian pada pernikahan impian Anda.</p>
+            <a href="#packages" class="browse-btn">Browse</a>
+        </div>
+        <div class="hero-image">
+        <img src="image/home.jpg" alt="Elegant wedding couple on stone stairs with floral decorations">
+        </div>
+    </div>
+</section>
 
         <section id="vendor" class="vendor-section">
             <h2>Our Wedding Packages</h2>
@@ -66,6 +65,48 @@
                 </div>
             </div>
         </section>
+        
+        <section id="review" class="review-section">
+    <h2>Customer Reviews</h2>
+    <div class="review-grid">
+        <div class="review-card">
+            <div class="review-content">
+                <p>"Pelayanan luar biasa! Sangat membantu dalam perencanaan pernikahan kami."</p>
+            </div>
+            <div class="reviewer">
+                <img src="avatar1.jpg" alt="John Doe" class="reviewer-img">
+                <p class="reviewer-name">John Doe</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-content">
+                <p>"Tim yang profesional dan kreatif. Hasil pernikahan kami benar-benar seperti mimpi!"</p>
+            </div>
+            <div class="reviewer">
+                <img src="avatar2.jpg" alt="Jane Smith" class="reviewer-img">
+                <p class="reviewer-name">Jane Smith</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-content">
+                <p>"Sangat merekomendasikan! Mereka membuat hari spesial kami menjadi tak terlupakan."</p>
+            </div>
+            <div class="reviewer">
+                <img src="avatar3.jpg" alt="Mike Johnson" class="reviewer-img">
+                <p class="reviewer-name">Mike Johnson</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-content">
+                <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
+            </div>
+            <div class="reviewer">
+                <img src="avatar4.jpg" alt="Emily Brown" class="reviewer-img">
+                <p class="reviewer-name">Emily Brown</p>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <script>
@@ -78,5 +119,30 @@
             });
         });
     </script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Our Location</h3>
+            <p>Jl. Raya Sempidi No.69 Lukluk, Mengwi, Badung, Bali</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Phone: +62 853-3777-1403</p>
+            <p>Email: info@baliglitzwedding.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Bali Glitz Wedding. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
