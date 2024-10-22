@@ -129,7 +129,7 @@
                 <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
             </div>
             <div class="reviewer">
-                <img src="avatar4.jpg" alt="arindi" class="reviewer-img">
+                <img src="image/WhatsApp Image 2024-10-22 at 22.19.32.jpeg" alt="arindi" class="reviewer-img">
                 <p class="reviewer-name">Arindi Gempol</p>
             </div>
         </div>
