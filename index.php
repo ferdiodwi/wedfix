@@ -17,6 +17,8 @@
             <a href="#index.php" class="active">Home</a>
             <a href="vendor.php">Vendor</a>
             <a href="#review">Review</a>
+            <a href="#review">Galery</a>
+            <a href="#review">Planning</a>
         </div>
         <div class="auth-button">
             <a href="login/login.php" class="login-btn">

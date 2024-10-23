@@ -14,9 +14,11 @@
     <nav class="navbar">
         <div class="logo">Sido Rabi</div>
         <div class="nav-links">
-            <a href="index.php" class="active">Home</a>
-            <a href="vendor.php">Vendor</a>
+            <a href="index.php" >Home</a>
+            <a href="vendor.php"class="active">Vendor</a>
             <a href="#review">Review</a>
+            <a href="#review">Galery</a>
+            <a href="#review">Planing</a>
         </div>
         <div class="auth-button">
             <a href="login/login.php" class="login-btn">
