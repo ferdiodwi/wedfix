@@ -31,7 +31,7 @@
 
     <main>
         <section class="vendor-search">
-            <h1>Find Your Vendor</h1>
+            <h1 style="color: black;">Find Your Vendor</h1>
             <form action="" method="GET" class="search-form">
                 <input type="text" name="search" placeholder="Search vendors...">
                 <button type="submit">Search</button>
