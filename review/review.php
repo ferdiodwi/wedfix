@@ -1,3 +1,32 @@
+<?php
+include 'C:/db_wedding.php'; // Pastikan ini benar dan file ada
+
+$review_message = ''; 
+if (isset($_POST['submit_review'])) { 
+    $name = trim($_POST['name']); 
+    $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL); 
+    $rating = (int)$_POST['rating']; 
+    $comment = htmlspecialchars(strip_tags(trim($_POST['comment']))); 
+    
+    if ($email && $rating >= 1 && $rating <= 5 && $name) { 
+        $stmt = $conn->prepare("INSERT INTO reviews (name, email, rating, comment) VALUES (:name, :email, :rating, :comment)"); 
+        $stmt->bindParam(':name', $name); 
+        $stmt->bindParam(':email', $email); 
+        $stmt->bindParam(':rating', $rating); 
+        $stmt->bindParam(':comment', $comment); 
+        
+        if ($stmt->execute()) { 
+            $review_message = 'Terima kasih atas ulasan Anda!'; 
+        } else { 
+            $review_message = 'Gagal mengirim ulasan, coba lagi!'; 
+        } 
+    } else { 
+        $review_message = 'Pastikan semua data telah diisi dengan benar!'; 
+    } 
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
