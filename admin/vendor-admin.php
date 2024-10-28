@@ -4,26 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Organizer</title>
-    <link rel="stylesheet" href="/wedfix/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Sido Rabi</div>
-        <div class="nav-links">
+    <nav>
+        <div class="logo">
+          <img src="/wedfix/image/Sidorabi.png" alt="logo" />
+          <h1>Sido Rabi</h1>
+        </div>
+        <ul>
+          <li>
             <a href="home-admin.php">Home</a>
+          </li>
+          <li>
             <a href="vendor-admin.php" class="active">Vendor</a>
-            <a href="#gallery">Galery</a>
-            <a href="#planning">Planning</a>
+          </li>
+          <li>
+            <a href="#">Review</a>
+          </li>
+          <li>
+            <a href="#">Galery</a>
+          </li>
+          <li>
+            <a href="#">Planning</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
         <div class="auth-button">
-            <a href="/wedfix/index.php" class="login-btn">
-                <i class="fas fa-user"></i>
-                Login
-            </a>
+              <a href="index.php" class="login-btn">
+                  <i class="fas fa-user"></i>
+                  Login
+              </a>
         </div>
     </nav>
+    <div class="menubar">
+        <ul>
+            <li>
+              <a href="home-admin.php">Home</a>
+            </li>
+            <li>
+              <a href="vendor-admin.php" class="active">Vendor</a>
+            </li>
+            <li>
+              <a href="#">Review</a>
+            </li>
+            <li>
+              <a href="#">Galery</a>
+            </li>
+            <li>
+              <a href="#">Planning</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 
     <main>
         <section class="vendor-search">
@@ -83,7 +123,7 @@
                 </div>
 
                 <div class="category-card">
-                    <img src="/wedfix/image/pexels-fu-zhichao-176355-587741.jpg" alt="Entertainment">
+                    <img src="/wedfix/image/pexels-diana-titenko-1716093-10408275.jpg" alt="Entertainment">
                     <h3>Entertainment</h3>
                     <div class="action-buttons">
                         <button class="btn-edit" onclick="editVendor('Entertainment')">Edit</button>

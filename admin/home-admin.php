@@ -4,28 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Organizer</title>
-    <link rel="stylesheet" href="/wedfix/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Sido Rabi</div>
-        <div class="nav-links">
-            <a href="#index.php" class="active">Home</a>
+    <nav>
+        <div class="logo">
+          <img src="/wedfix/image/Sidorabi.png" alt="logo" />
+          <h1>Sido Rabi</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="home-admin.php" class="active">Home</a>
+          </li>
+          <li>
             <a href="vendor-admin.php">Vendor</a>
-            <a href="#review">Galery</a>
-            <a href="#review">Planning</a>
+          </li>
+          <li>
+            <a href="#">Review</a>
+          </li>
+          <li>
+            <a href="#">Galery</a>
+          </li>
+          <li>
+            <a href="#">Planning</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
         <div class="auth-button">
-            <a href="/wedfix/index.php" class="login-btn">
-                <i class="fas fa-user"></i>
-                Login
-            </a>
+              <a href="index.php" class="login-btn">
+                  <i class="fas fa-user"></i>
+                  Login
+              </a>
         </div>
     </nav>
+    <div class="menubar">
+        <ul>
+            <li>
+             <a href="home-admin.php" class="active">Home</a>
+            </li>
+            <li>
+              <a href="vendor-admin.php">Vendor</a>
+            </li>
+            <li>
+              <a href="#">Review</a>
+            </li>
+            <li>
+              <a href="#">Galery</a>
+            </li>
+            <li>
+              <a href="#">Planning</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 
     <main>
 <section class="hero" id="home">
@@ -43,36 +83,63 @@
 
         <section id="vendor" class="vendor-section">
             <h2>Our Wedding Packages</h2>
+            <h2>
+                <button class="btn-add" onclick="addVendor()">Tambah Vendor</button>
+            </h2>
             <div class="package-grid">
             <div class="package-card">
                     <h3>Khusus Koe</h3>
                     <div class="price">Rp.0</div>
                     <button class="select-btn">Select</button>
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editVendor('Photographer')">Edit</button>
+                        <button class="btn-delete" onclick="deleteVendor('Photographer')">Hapus</button>
+                    </div>
                 </div>
                 <div class="package-card">
                     <h3>Murah Meriah</h3>
                     <div class="price">Rp. 100.000</div>
                     <button class="select-btn">Select</button>
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editVendor('Photographer')">Edit</button>
+                        <button class="btn-delete" onclick="deleteVendor('Photographer')">Hapus</button>
+                    </div>
                 </div>
                 <div class="package-card">
                     <h3>Basic Wedding</h3>
                     <div class="price">Rp. 75.000.000</div>
                     <button class="select-btn">Select</button>
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editVendor('Photographer')">Edit</button>
+                        <button class="btn-delete" onclick="deleteVendor('Photographer')">Hapus</button>
+                    </div>
                 </div>
                 <div class="package-card">
                     <h3>Silver Wedding</h3>
                     <div class="price">Rp. 125.000.000</div>
                     <button class="select-btn">Select</button>
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editVendor('Photographer')">Edit</button>
+                        <button class="btn-delete" onclick="deleteVendor('Photographer')">Hapus</button>
+                    </div>
                 </div>
                 <div class="package-card">
                     <h3>Gold Wedding</h3>
                     <div class="price">Rp. 175.000.000</div>
                     <button class="select-btn">Select</button>
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editVendor('Photographer')">Edit</button>
+                        <button class="btn-delete" onclick="deleteVendor('Photographer')">Hapus</button>
+                    </div>
                 </div>
                 <div class="package-card">
                     <h3>Platinum Wedding</h3>
                     <div class="price">Rp. 250.000.000</div>
                     <button class="select-btn">Select</button>
+                    <div class="action-buttons">
+                        <button class="btn-edit" onclick="editVendor('Photographer')">Edit</button>
+                        <button class="btn-delete" onclick="deleteVendor('Photographer')">Hapus</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -148,6 +215,7 @@
             });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 <footer class="footer">
     <div class="footer-content">

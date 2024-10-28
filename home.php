@@ -11,22 +11,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Sido Rabi</div>
-        <div class="nav-links">
+    <nav>
+        <div class="logo">
+          <img src="image/Sidorabi.png" alt="logo" />
+          <h1>Sido Rabi</h1>
+        </div>
+        <ul>
+          <li>
             <a href="home.php" class="active">Home</a>
+          </li>
+          <li>
             <a href="vendor.php">Vendor</a>
-            <a href="#review">Review</a>
-            <a href="#review">Galery</a>
-            <a href="#review">Planning</a>
+          </li>
+          <li>
+            <a href="#">Review</a>
+          </li>
+          <li>
+            <a href="#">Galery</a>
+          </li>
+          <li>
+            <a href="#">Planning</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
         <div class="auth-button">
-            <a href="index.php" class="login-btn">
-                <i class="fas fa-user"></i>
-                Login
-            </a>
+        <?php
+            // Memulai sesi
+            session_start();
+            
+            // Menghapus semua sesi
+            session_unset();
+            
+            // Menghancurkan sesi
+            session_destroy();
+            
+            // Mengarahkan pengguna ke halaman login atau halaman lain setelah logout
+            header("Location: login.php");
+            exit;
+            ?>
+            
+              <a href="index.php" class="login-btn">
+                  <i class="fas fa-user"></i>
+                  Login
+              </a>
         </div>
     </nav>
+    <div class="menubar">
+        <ul>
+            <li>
+              <a href="home-admin.php">Home</a>
+            </li>
+            <li>
+              <a href="vendor-admin.php" class="active">Vendor</a>
+            </li>
+            <li>
+              <a href="#">Review</a>
+            </li>
+            <li>
+              <a href="#">Galery</a>
+            </li>
+            <li>
+              <a href="#">Planning</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 
     <main>
 <section class="hero" id="home">
