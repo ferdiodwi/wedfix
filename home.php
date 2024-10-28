@@ -27,7 +27,7 @@
             <a href="#">Review</a>
           </li>
           <li>
-            <a href="#">Galery</a>
+            <a href="galery/galery.php">Galery</a>
           </li>
           <li>
             <a href="#">Planning</a>
@@ -39,40 +39,25 @@
           <span class="line"></span>
         </div>
         <div class="auth-button">
-        <?php
-            // Memulai sesi
-            session_start();
-            
-            // Menghapus semua sesi
-            session_unset();
-            
-            // Menghancurkan sesi
-            session_destroy();
-            
-            // Mengarahkan pengguna ke halaman login atau halaman lain setelah logout
-            header("Location: login.php");
-            exit;
-            ?>
-            
               <a href="index.php" class="login-btn">
                   <i class="fas fa-user"></i>
-                  Login
+                  LogOut
               </a>
         </div>
     </nav>
     <div class="menubar">
         <ul>
             <li>
-              <a href="home-admin.php">Home</a>
+              <a href="home.php" class="active">Home</a>
             </li>
             <li>
-              <a href="vendor-admin.php" class="active">Vendor</a>
+              <a href="vendor.php" >Vendor</a>
             </li>
             <li>
-              <a href="#">Review</a>
+              <a href="">Review</a>
             </li>
             <li>
-              <a href="#">Galery</a>
+              <a href="galery/galery.php">Galery</a>
             </li>
             <li>
               <a href="#">Planning</a>

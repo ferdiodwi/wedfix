@@ -27,7 +27,7 @@
             <a href="#">Review</a>
           </li>
           <li>
-            <a href="#">Galery</a>
+            <a href="galery/galery.php">Galery</a>
           </li>
           <li>
             <a href="#">Planning</a>
@@ -41,23 +41,23 @@
         <div class="auth-button">
               <a href="index.php" class="login-btn">
                   <i class="fas fa-user"></i>
-                  Login
+                  LogOut
               </a>
         </div>
     </nav>
     <div class="menubar">
         <ul>
             <li>
-              <a href="home-admin.php">Home</a>
+              <a href="home.php">Home</a>
             </li>
             <li>
-              <a href="vendor-admin.php" class="active">Vendor</a>
+              <a href="vendor.php" class="active">Vendor</a>
             </li>
             <li>
               <a href="#">Review</a>
             </li>
             <li>
-              <a href="#">Galery</a>
+              <a href="galery/galery.php">Galery</a>
             </li>
             <li>
               <a href="#">Planning</a>

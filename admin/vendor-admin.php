@@ -25,7 +25,7 @@
             <a href="#">Review</a>
           </li>
           <li>
-            <a href="#">Galery</a>
+            <a href="galery/galery.php">Galery</a>
           </li>
           <li>
             <a href="#">Planning</a>
@@ -37,9 +37,9 @@
           <span class="line"></span>
         </div>
         <div class="auth-button">
-              <a href="index.php" class="login-btn">
+              <a href="/wedfix/index.php" class="login-btn">
                   <i class="fas fa-user"></i>
-                  Login
+                  LogOut
               </a>
         </div>
     </nav>
