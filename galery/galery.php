@@ -92,37 +92,37 @@
 		<div class="hero-slider">
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/1.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/1.jpg" alt="">
+					<img src="img/hero-slider/1.jpeg" alt="">
 				</a>
 			</div>
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/2.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/2.jpg" alt="">
+					<img src="img/hero-slider/2.jpeg" alt="">
 					</a>
 			</div>
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/3.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/3.jpg" alt="">
+					<img src="img/hero-slider/3.jpeg" alt="">
 				</a>	
 			</div>
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/4.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/4.jpg" alt="">
+					<img src="img/hero-slider/4.jpeg" alt="">
 				</a>	
 			</div>
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/5.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/5.jpg" alt="">
+					<img src="img/hero-slider/5.jpeg" alt="">
 				</a>	
 			</div>
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/6.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/6.jpg" alt="">
+					<img src="img/hero-slider/6.jpeg" alt="">
 				</a>	
 			</div>
 			<div class="slide-item">
 				<a class="fresco" href="img/hero-slider/7.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/7.jpg" alt="">
+					<img src="img/hero-slider/7.jpeg" alt="">
 				</a>	
 			</div>
 		</div>
@@ -165,62 +165,62 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/1.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/1.jpg" alt="">
+						<img src="img/gallery/1.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/2.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/2.jpg" alt="">
+						<img src="img/gallery/2.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/3.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/3.jpg" alt="">
+						<img src="img/gallery/3.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/4.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/4.jpg" alt="">
+						<img src="img/gallery/4.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/5.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/5.jpg" alt="">
+						<img src="img/gallery/5.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/6.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/6.jpg" alt="">
+						<img src="img/gallery/6.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/7.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/7.jpg" alt="">
+						<img src="img/gallery/7.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/8.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/8.jpg" alt="">
+						<img src="img/gallery/8.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/9.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/9.jpg" alt="">
+						<img src="img/gallery/9.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/10.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/10.jpg" alt="">
+						<img src="img/gallery/10.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/11.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/11.jpg" alt="">
+						<img src="img/gallery/11.jpeg" alt="">
 					</a>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
 					<a class="gallery__item fresco" href="img/gallery/12.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/12.jpg" alt="">
+						<img src="img/gallery/12.jpeg" alt="">
 					</a>
 				</div>
 			</div>
