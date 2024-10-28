@@ -21,7 +21,7 @@
             <a href="#review">Planing</a>
         </div>
         <div class="auth-button">
-            <a href="login/login.php" class="login-btn">
+            <a href="index.php" class="login-btn">
                 <i class="fas fa-user"></i>
                 Login
             </a>
