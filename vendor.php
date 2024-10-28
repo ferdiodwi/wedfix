@@ -14,7 +14,7 @@
     <nav class="navbar">
         <div class="logo">Sido Rabi</div>
         <div class="nav-links">
-            <a href="index.php" >Home</a>
+            <a href="home.php" >Home</a>
             <a href="vendor.php"class="active">Vendor</a>
             <a href="#review">Review</a>
             <a href="#review">Galery</a>

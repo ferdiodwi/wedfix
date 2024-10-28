@@ -1,176 +1,124 @@
+<?php
+include 'db_connection.php';
+$message = '';
+
+// Proses Registrasi
+if (isset($_POST['register'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $role = $_POST['role'];
+
+    // Cek apakah email sudah terdaftar
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+
+    if ($stmt->rowCount() > 0) {
+        $message = 'Email sudah digunakan!';
+    } else {
+        $stmt = $conn->prepare("INSERT INTO users (nama, email, password, role) VALUES (:name, :email, :password, :role)");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':role', $role);
+
+        if ($stmt->execute()) {
+            $message = 'Akun berhasil dibuat!';
+        } else {
+            $message = 'Gagal membuat akun!';
+        }
+    }
+}
+
+// Proses Login
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        if (password_verify($password, $user['password'])) {
+            session_start();
+            $_SESSION['user_id'] = $user['id_user'];
+            $_SESSION['role'] = $user['role'];
+            $_SESSION['nama'] = $user['nama'];
+
+            if ($user['role'] == 'admin') {
+                header("Location: admin/home-admin.php");
+            } else {
+                header("Location: home.php");
+            }
+            exit;
+        } else {
+            $message = 'Password salah!';
+        }
+    } else {
+        $message = 'Email tidak ditemukan!';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Organizer</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login/style_login.css">
+    <title>Modern Login Page | AsmrProg</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Sido Rabi</div>
-        <div class="nav-links">
-            <a href="#index.php" class="active">Home</a>
-            <a href="vendor.php">Vendor</a>
-            <a href="#review">Review</a>
-            <a href="#review">Galery</a>
-            <a href="#review">Planning</a>
-        </div>
-        <div class="auth-button">
-            <a href="login/login.php" class="login-btn">
-                <i class="fas fa-user"></i>
-                Login
-            </a>
-        </div>
-    </nav>
 
-    <main>
-<section class="hero" id="home">
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>Wedding, 💝<br>what the world needs</h1>
-            <p>Solusi untuk setiap pernikahan yang sempurna. Temukan paket pernikahan untuk membawa impian pada pernikahan impian Anda.</p>
-            <a href="#packages" class="browse-btn">Browse</a>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form method="POST" action="">
+                <h1>Create Account</h1>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <select class="form-control" name="role">
+                    <option value="Admin">admin</option>
+                    <option value="User">user</option>
+                </select>
+                <button type="submit" name="register">Sign Up</button>
+            </form>
         </div>
-        <div class="hero-image">
-        <img src="image/home.jpg" alt="Elegant wedding couple on stone stairs with floral decorations">
+        <div class="form-container sign-in">
+            <form method="POST" action="">
+                <h1>Sign In</h1>
+                <span>or use your email for login</span>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <a href="#">Forget Your Password?</a>
+                <button type="submit" name="login">Sign In</button>
+            </form>
         </div>
-    </div>
-</section>
-
-        <section id="vendor" class="vendor-section">
-            <h2>Our Wedding Packages</h2>
-            <div class="package-grid">
-            <div class="package-card">
-                    <h3>Khusus Koe</h3>
-                    <div class="price">Rp.0</div>
-                    <button class="select-btn">Select</button>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
                 </div>
-                <div class="package-card">
-                    <h3>Murah Meriah</h3>
-                    <div class="price">Rp. 100.000</div>
-                    <button class="select-btn">Select</button>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
                 </div>
-                <div class="package-card">
-                    <h3>Basic Wedding</h3>
-                    <div class="price">Rp. 75.000.000</div>
-                    <button class="select-btn">Select</button>
-                </div>
-                <div class="package-card">
-                    <h3>Silver Wedding</h3>
-                    <div class="price">Rp. 125.000.000</div>
-                    <button class="select-btn">Select</button>
-                </div>
-                <div class="package-card">
-                    <h3>Gold Wedding</h3>
-                    <div class="price">Rp. 175.000.000</div>
-                    <button class="select-btn">Select</button>
-                </div>
-                <div class="package-card">
-                    <h3>Platinum Wedding</h3>
-                    <div class="price">Rp. 250.000.000</div>
-                    <button class="select-btn">Select</button>
-                </div>
-            </div>
-        </section>
-        
-        <section id="review" class="review-section">
-    <h2>Customer Reviews</h2>
-    <div class="review-grid">
-        <div class="review-card">
-            <div class="review-content">
-                <p>"Pelayanan luar biasa! Sangat membantu dalam perencanaan pernikahan kami."</p>
-            </div>
-            <div class="reviewer">
-                <img src="image/WhatsApp Image 2024-10-22 at 21.30.21.jpeg" alt="ferdio" class="reviewer-img">
-                <p class="reviewer-name">Ferdio Dwi</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p>"Tim yang profesional dan kreatif. Hasil pernikahan kami benar-benar seperti mimpi!"</p>
-            </div>
-            <div class="reviewer">
-                <img src="image/WhatsApp Image 2024-10-22 at 21.44.09.jpeg" alt="Mas Rio" class="reviewer-img">
-                <p class="reviewer-name">Mas Rio</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p>"Sangat merekomendasikan! Mereka membuat hari spesial kami menjadi tak terlupakan."</p>
-            </div>
-            <div class="reviewer">
-                <img src="image/WhatsApp Image 2024-10-22 at 21.49.19.jpeg" alt="Redrigo" class="reviewer-img">
-                <p class="reviewer-name">Redrigo</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
-            </div>
-            <div class="reviewer">
-                <img src="image/WhatsApp Image 2024-10-22 at 21.58.47.jpeg" alt="rio" class="reviewer-img">
-                <p class="reviewer-name">Sam Rio Sul</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
-            </div>
-            <div class="reviewer">
-                <img src="avatar4.jpg" alt="alvyn" class="reviewer-img">
-                <p class="reviewer-name">Alvyn Dlogok</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p>"Pelayanan yang luar biasa dengan harga yang sangat terjangkau. Terima kasih banyak!"</p>
-            </div>
-            <div class="reviewer">
-                <img src="image/WhatsApp Image 2024-10-22 at 22.19.32.jpeg" alt="arindi" class="reviewer-img">
-                <p class="reviewer-name">Arindi Gempol</p>
             </div>
         </div>
     </div>
-</section>
-    </main>
 
-    <script>
-        // Add active class to current nav item
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
+    <?php if ($message) : ?>
+        <script>alert('<?php echo $message; ?>');</script>
+    <?php endif; ?>
+
+    <script src="login/script.js"></script>
 </body>
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Our Location</h3>
-            <p>Jl. Raya Sempidi No.69 Lukluk, Mengwi, Badung, Bali</p>
-        </div>
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p>Phone: +62 853-3777-1403</p>
-            <p>Email: info@baliglitzwedding.com</p>
-        </div>
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2023 Bali Glitz Wedding. All rights reserved.</p>
-    </div>
-</footer>
 </html>
